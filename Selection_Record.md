@@ -46,6 +46,8 @@ Weighted Avg.    0.691     0.217      0.688     0.691     0.686      0.816
 
 ## Stepwise
 
+Logistic Regression was used as the core evaluation function.
+
 Attributes:
 
 ```
@@ -85,6 +87,19 @@ Weighted Avg.    0.736     0.19       0.733     0.736     0.731      0.841
 ```
 
 ## Genetic Algorithm
+
+Logistic Regression was used as the core evaluation function.
+
+Configurations:
+```
+  Population size: 500
+  Fitness function: Classification accuracy derived from Logistic Regression
+  Selection Method: Tournament selection
+  Crossover Type: Two-point crossover
+  Crossover Rate: 0.6
+  Mutation Rate: 0.03
+  Stopping Criteria: 60 generations
+```
 
 Attributes:
 
