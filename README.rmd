@@ -1,0 +1,86 @@
+## Data Source
+Data comes from <a href="https://collegescorecard.ed.gov/data/" target="_blank">College Scorecard</a>. Data is also accesible on <a href="https://www.kaggle.com/kaggle/college-scorecard">Kaggle</a>.
+
+The potential attributes included in this project come from three years: 2001, 2003 and 2005. The corresponding targets were the 6-year-post-graduation median income data. The targets come from three years: 2007, 2009, and 2011.
+
+Thinking the data as a large excel sheet, each row represents a cohort of students who graduated from a certain university in one of the three years (2001, 2003, 2005). Each column represents a variable.
+
+### Association Key
+
+* UNITID: UNITID was used to associate all attributes and target together.
+
+### Target
+
+* mn_earn_wne_p6: 6-year-post-graduation mean individual income
+* mn_earn_discretize: discretized 6-year-post-graduation mean individual income
+* md_earn_wne_p6: 6-year-post-graduation median individual income
+* md_earn_discretize: discretized 6-year-post-graduation median individual income
+
+Discretization standard from American Individual Income Distribution (United States Census Bureau, 2010) was used. Income was discretized into four groups:
+
+1.	Very low: From 0 to 25,000
+2.	Low: From 25,000 to 37,500
+3.	Middle: From 37,500 to 50,000
+4.	High: Above 50,000
+
+__Note: Only mn_earn_discretize was used as the target in this project.__
+
+### Potential Attributes
+
+__Group One: School information__
+* CONTROL: School Type, e.g. private
+* PREDDEG: Predominant Awarded Degrees (e.g., bachelor degree)
+* UGDS: Student Size
+* INEXPFTE: Instructional Expenditure per Student
+* PPTUG_EF: Ratio between Part-time and Full-time Students
+* C150_4: Degree Completion Rate
+* AVGFACSAL: Average Faculty Salary
+
+__Group Two: Admission information__
+* ADM_RATE_ALL: Admission Rate
+* SAT_AVG: Average SAT Score (not available before 2001)
+
+__Group Three: Cost information__
+* TUITIONFEE_IN: In-State Tuition (not available before 2000)
+* TUITIONFEE_OUT: Out-of-State Tuition (not available before 2000)
+
+__Group Four: Student information__
+* UGDS_WHITENH: Percentage of White Students
+* UGDS_BLACKNH: Percentage of Black Students
+* UGDS_API: Percentage of Asian Students
+* UGDS_AIANOld: Percentage of American Indian Students
+* UGDS_HISPOld: Percentage of Hispanic Students
+* female: Percentage of Female Students
+* first_gen: Percentage of First-Generation Students
+* age_entry: Average Age of Entering College
+* DEBT_MDN: Average Debt
+
+__Group Five: Family and community information__
+* INC_PCT_LO: Percentage of Students whose Family Income was classified as Low
+* INC_PCT_M1: Percentage of Students whose Family Income was classified as Lower Middle
+* INC_PCT_M2: Percentage of Students whose Family Income was classified as Higher Middle
+* INC_PCT_H1: Percentage of Students whose Family Income was classified as High
+* INC_PCT_H2: Percentage of Students whose Family Income was classified as Very High
+* PAR_ED_PCT_1STGEN: Percentage of Students whose Parents were 1st Generation College Student
+* PAR_ED_PCT_MS: Percentage of Students whose Parents Have a Middle School Degree
+* PAR_ED_PCT_HS: Percentage of Students whose Parents Have a High School Degree
+* PAR_ED_PCT_PS: Percentage of Students whose Parents Have a Post-High-School Degree
+* pct_grad_prof: Population from Students' Zip Codes over 25% with a Professional Degree
+
+## Selecting the Most Important Attributes of Post-Graduation Income Classification
+
+__Feature Selection__
+
+* Filter Methods
+* Stepwise Greedy Methods
+* Genetic Algorithm
+
+For details, see <a href="https://github.com/Neo-Hao/feature-selection-post-graduation-income/blob/master/Selection_Record.md">here</a>.
+
+__Classification__
+
+* Logistic Regression
+* Support Vector Machine (Kernel PUK)
+* Random Tree
+
+For details, see <a href="https://github.com/Neo-Hao/feature-selection-post-graduation-income/blob/master/Classification_Record.md">here</a>.
